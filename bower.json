@@ -1,0 +1,6 @@
+{
+  "name": "A Deed A Week",
+    "dependencies": {
+        "angular-ui-tinymce": "latest"
+    }
+}

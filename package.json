@@ -1,0 +1,16 @@
+{
+    "name": "angular-bootstrap-boilerplate",
+    "version": "0.0.3",
+    "description": "Angular Bootstrap Web App Boilerplate",
+    "main": "index.html",
+    "repository": {
+        "type": "git",
+        "url": "https://mfyz@github.com/mfyz/angular-bootstrap-boilerplate.git"
+    },
+    "author": "Mehmet Fatih YILDIZ",
+    "homepage": "https://github.com/mfyz/angular-bootstrap-boilerplate",
+    "devDependencies": {
+        "browser-sync": "^2.14.0",
+        "gulp": "^3.9.1"
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="WebApp">
+    <head>
+        <title>A Deed A Week</title>
+        <link rel="stylesheet" type="text/css" href="assets/external/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet/less" type="text/css" href="assets/css/style.less"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">A Deed A Week</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{active: controller == 'latest'}">
+                            <a ui-sref="latest">Latest</a>
+                        </li>
+                        <li ng-class="{active: controller == 'featured'}">
+                            <a ui-sref="featured">Featured</a>
+                        </li>
+                        <li ng-class="{active: controller == 'compose'}">
+                            <a ui-sref="compose">Compose</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="page-content {{controller}}-container" ui-view></div>
+
+        <script src="assets/external/jquery-2.2.3.min.js" charset="utf-8"></script>
+        <script src="assets/external/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+        <script src="assets/external/less.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="bower_components/tinymce-dist/tinymce.js"></script>
+        <script src="assets/external/angular/angular.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+        <script src="assets/external/angular/angular-ui-router.min.js" charset="utf-8"></script>
+        <script src="assets/external/angular/angular-sanitize.min.js" charset="utf-8"></script>
+        <script src="assets/external/angular/angular-local-storage.min.js" charset="utf-8"></script>
+        <script src="assets/external/ui-bootstrap-1.3.2.min.js" charset="utf-8"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+        <script src="app/init.js" charset="utf-8"></script>
+        <script src="controllers/latest.js" charset="utf-8"></script>
+        <script src="controllers/compose.js" charset="utf-8"></script>
+        <script src="controllers/featured.js" charset="utf-8"></script>
+        <script src="app/routes.js" charset="utf-8"></script>
+    </body>
+</html>

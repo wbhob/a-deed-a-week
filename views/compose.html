@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="title">Compose a New Deed</h1>
+        </div>
+    </div>
+    <form>
+        <div class="row">
+            <div class="col-md-6" style="margin-bottom:10px">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Title</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name this deed...">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Date</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open1()">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Upload an Image</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">We prefer JPG and PNG.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <textarea ui-tinymce ng-model="" placeholder="Tell us a little about your deed.."></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
