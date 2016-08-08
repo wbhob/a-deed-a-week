@@ -45,10 +45,17 @@
         <script src="assets/external/angular/angular-sanitize.min.js" charset="utf-8"></script>
         <script src="assets/external/angular/angular-local-storage.min.js" charset="utf-8"></script>
         <script src="assets/external/ui-bootstrap-1.3.2.min.js" charset="utf-8"></script>
-        <!-- Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-
-        <!-- AngularFire -->
+        <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCTPLnBl1eQ98mqSnrYQly5QSXImyftEbg",
+                authDomain: "a-deed-a-week.firebaseapp.com",
+                databaseURL: "https://a-deed-a-week.firebaseio.com",
+                storageBucket: "a-deed-a-week.appspot.com"
+            };
+            firebase.initializeApp(config);
+        </script>
         <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
 
         <script src="app/init.js" charset="utf-8"></script>

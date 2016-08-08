@@ -1,6 +1,4 @@
-webApp.controller('LatestController', ['$scope', '$uibModal', function($scope, $modal) {
-	$scope.deeds = [{
-		title: "Title",
-		description: "<p>I am the <em>table</em></p>",
-	}];
+webApp.controller('LatestController', ['$scope', '$firebaseArray', '$firebaseObject', function($scope, $firebaseArray, $firebaseObject) {
+	var deedsRef = firebase.database().ref("deeds");
+	$scope.deeds = $firebaseArray(deedsRef);
 }]);
