@@ -15,7 +15,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">A Deed A Week</a>
+                    <img class="navbar-brand" ui-sref="latest" src="assets/img/logo.png"/>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -26,7 +26,12 @@
                             <a ui-sref="featured">Featured</a>
                         </li>
                         <li ng-class="{active: controller == 'compose'}">
-                            <a ui-sref="compose">Compose</a>
+                            <a ui-sref="compose">Document a Deed</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a ui-sref="login">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -45,6 +50,7 @@
         <script src="assets/external/angular/angular-sanitize.min.js" charset="utf-8"></script>
         <script src="assets/external/angular/angular-local-storage.min.js" charset="utf-8"></script>
         <script src="assets/external/ui-bootstrap-1.3.2.min.js" charset="utf-8"></script>
+        <script src="assets/external/ng-truncate.js" charset="utf-8"></script>
         <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
         <script>
             // Initialize Firebase
@@ -57,11 +63,12 @@
             firebase.initializeApp(config);
         </script>
         <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-
+        <script src="http://cdn.filesizejs.com/filesize.min.js"></script>
         <script src="app/init.js" charset="utf-8"></script>
         <script src="controllers/latest.js" charset="utf-8"></script>
         <script src="controllers/compose.js" charset="utf-8"></script>
         <script src="controllers/featured.js" charset="utf-8"></script>
+        <script src="controllers/login.js" charset="utf-8"></script>
+        <script src="controllers/register.js" charset="utf-8"></script>
         <script src="app/routes.js" charset="utf-8"></script>
-    </body>
-</html>
+        <script>

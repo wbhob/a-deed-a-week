@@ -1,4 +1,4 @@
-webApp = angular.module('WebApp', ['ui.router', 'ui.bootstrap', 'ui.tinymce', 'ngSanitize', 'firebase']);
+webApp = angular.module('WebApp', ['ui.router', 'ui.bootstrap', 'ui.tinymce', 'ngSanitize', 'firebase', 'ngTextTruncate']);
 
 webApp.run(function($rootScope) {
 	$rootScope.$on('$routeChangeSuccess', function(ev, data) {
@@ -8,5 +8,8 @@ webApp.run(function($rootScope) {
 			controller = controller.replace(/Controller/g, '');
 			$rootScope.controller = controller;
 		}
+	});
+	$rootScope.$on('$stateChangeSuccess', function(ev, to, toParams, from, fromParams) {
+		$rootScope.fromState = from;
 	});
 });

@@ -1,7 +1,23 @@
 <div class="container">
-	<div class="row">
-		<div class="col-lg-12">
-			<h1 class="title">About</h1>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="title">Featured Deeds</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="deed in deeds.slice().reverse()" ng-show="deed.featured">
+            <div class="thumbnail">
+                <img ng-src="{{deed.image}}" alt="{{deed.title}}">
+                <div class="caption">
+                    <h3>{{deed.title}}</h3>
+                    <username user="{{deed.user}}"></username>
+                    <p ng-bind-html="deed.description"></p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">Details</a>
+                        <!--<a href="#" class="btn btn-default" role="button">Button</a>-->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

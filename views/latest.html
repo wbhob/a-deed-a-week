@@ -5,15 +5,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6 col-md-4" ng-repeat="deed in deeds">
+        <div class="col-sm-6 col-md-4" ng-repeat="deed in deeds.slice().reverse()">
             <div class="thumbnail">
-                <img ng-src="{{deed.img}}" alt="{{deed.title}}">
+                <img ng-src="{{deed.image}}" alt="{{deed.title}}" />
                 <div class="caption">
                     <h3>{{deed.title}}</h3>
-                    <p ng-bind-html="deed.description"></p>
+                    <username user="{{deed.user}}"></username>
+                    <p ng-text-truncate="deed.description" ng-tt-chars-threshold="200"></p>
                     <p>
-                        <a href="#" class="btn btn-primary" role="button">Button</a>
-                        <a href="#" class="btn btn-default" role="button">Button</a>
+                        <a href="#" class="btn btn-primary" role="button">Details</a>
                     </p>
                 </div>
             </div>
